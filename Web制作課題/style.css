@@ -1,0 +1,109 @@
+.cp_navi{
+    background-color: #db541e; /* メニューバーの背景色 */
+    border: 1px solid #dedede; /* メニューバーの枠の色 */
+    border-radius: 5px; /*メニューバーの枠の角の丸さ加減*/
+    box-shadow: 0 2px 2px -1px rgb(77, 43, 27); /* メニューバーの影 */
+    color: #888888;
+    display: block;
+    margin: 1em 1%;
+    overflow: hidden;
+    width: 98%;
+}
+
+/* ---------------- */
+/* ▼メニューバーの装飾 */
+/* ---------------- */
+
+.cp_navi ul{
+    margin: 0;
+    padding: 0px 0px 0px 10px; /* メニューバー内側の余白 */
+}
+.cp_navi ul li{
+    width: 130px;          /* メニュー項目の横幅(130px) */
+    display: inline-block; /* 横並びに配置 */
+    list-style-type: none; /* リストの先頭記号を消す */
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    border-right: 1px solid #bbbbbb; /* メニュー項目の横の区切り線 */
+}
+.cp_navi > ul > li > a > .caret {
+	border-top: 4px solid #b1f7fc;  /* (メニュー紹介)▼←の色 */
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	content: '';
+	display: inline-block;
+	height: 0;
+	width: 0;
+	vertical-align: middle;
+	-webkit-transition: color 0.1s linear;
+            transition: color 0.1s linear;
+}
+.cp_navi > ul > li > a {
+    color: #ffffff;  /* 通常文字色 */
+    display: block;
+    line-height: 56px;
+    padding: 0 10px;
+    text-align: center;  /* メインメニューの文字列の配置(中央寄せ) */
+    text-decoration: none;
+}
+.cp_navi > ul > li:hover {
+    background-color: rgb(224, 39, 45); /* メニュー項目にマウスが載った時の背景色 */
+}
+
+.cp_navi > ul > li:last-child {
+    border-right: none;
+}
+
+.cp_navi > ul > li:hover > a {
+	color: rgb(255, 255, 255); /* メニュー項目にマウスが載った時の文字色 */
+}
+.cp_navi > ul > li:hover > a > .caret {
+	border-top-color: rgb( 255, 255, 255 ); /* (メニュー紹介)▼←にマウスが載った時の色 */
+}
+ /*------------*/
+ /* サブメニュー */
+ /*------------*/
+.cp_navi > ul > li > div {
+	background-color: rgb(221, 53, 53); /* メニュー紹介下の項目背景色 */
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+	display: none;
+    margin: 0;
+	opacity: 0;
+	position: absolute;
+    width: 141px;
+	visibility: hidden;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+.cp_navi > ul > li:hover > div {
+	display: block;
+	opacity: 1;
+    visibility: visible;
+}
+.cp_navi > ul > li > div ul > li {
+	display: block; /* 項目内全域をリンク可能にする */
+}
+.cp_navi > ul > li > div ul > li > a {
+	color: #ffffff; /* メニュー紹介下の項目の文字色 */
+	display: block;
+    padding: 12px 0px; /* メニュー紹介下の項目の大きさ */
+    text-decoration: none;
+    border-top: 1px solid rgb(255, 207, 215); /* 項目上側の枠線 */
+}
+.cp_navi > ul > li > div ul > li:hover > a {
+	background-color: rgba(255, 255, 255, 0.1); /* メニュー紹介下の項目にマウスを載せた時の背景色 */
+}
+/*--------------*/
+/* メニューバー終 */
+/*--------------*/
+
+header{
+    position: relative;
+    height: 12.2vh;
+}
+header{
+    background: url(img/IMG_7079.png) center / cover;
+    background-color: rgba(255, 255, 255, 0.65);
+    background-blend-mode: lighten;
+}
